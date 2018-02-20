@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="Adrian Pardo">
+        <link rel="canonical" href="" />
+        <title>Game2</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="shortcut icon" href="..ico" />
+        <script language="javascript" type="text/javascript" src="assets/js/libraries/jquery-3.2.1.min.js"></script>
+        <script language="javascript" type="text/javascript" src="assets/js/libraries/p5.js"></script>
+        <script language="javascript" type="text/javascript" src="assets/js/libraries/p5.dom.js"></script>
+        <script language="javascript" type="text/javascript" src="assets/js/libraries/p5.play.js"></script>
+        <!-- uncomment lines below to include extra p5 libraries -->
+        <!--<script language="javascript" src="libraries/p5.dom.js"></script>-->
+        <!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
+
+        <!-- this line removes any default padding and style. you might only need one of these values set. -->
+        <style> body {padding: 0; margin: 0;} </style>
+        <script>
+            window.addEventListener("keydown", function(e) {
+                // space and arrow keys
+                if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                    e.preventDefault();
+                }
+            }, false);
+        </script>
+        <script>
+            // Google analytics
+        </script>
+    </head>
+    <body>
+        <div id="score">Credits</div>
+        <div id="menu">
+            <div id="credits"><a href="/">Home</a></div>
+            <a href="mailto:adrian@poopfare.com?Subject=Hello Poop Fare!" target="_top">
+                <div id="contact">Contact Us</div>
+            </a>
+        </div>
+        <div id="beta">Beta 1.0</div>
+        <div id="donate">
+            <div class="popup" id="paypal">
+                <a href="https://www.paypal.me/apardo04"><img src="/assets/img/paypal.png"></a>
+            </div>
+            <div class="popup" id="ltc">
+                <img src="/assets/img/ltc.png"/>
+                <span class="popuptext" id="ltcPopup">LVhv39aqs4AxJA5adS5robGbnb1tfABUzG</span>
+            </div>
+            <div class="popup" id="btc">
+                <img src="/assets/img/btc.png"/>
+                <span class="popuptext" id="btcPopup">1FiLQ5znejCi4riZZvHhoXiy8zzeVHtNzU</span>
+            </div>
+        </div>
+        <div id="credits-cont">
+            <div id="credit-title">Design + Programming</div>
+            <div id="credit-name">Adrian Pardo</div>
+            <div id="credit-title">Animation By</div>
+            <div id="credit-name">Animator</div>
+            <div id="credit-title">Written By</div>
+            <div id="credit-name">Writer</div>
+        </div>
+    </div>
+    </body>
+    <style>
+        div#credits-cont {
+            text-align: center;
+            width: 50%;
+            position: absolute;
+            top: 14%;
+            left: 25%;
+            font-size: 42px;
+            color: #ffdd4a;
+            -webkit-text-stroke: 1px black;
+            text-shadow: 1px 1px 0 #000, 0px 0px 0 #000, 0px 0px 0 #000, 0px 0px 0 #000, 0px 0px 0 #000;
+        }
+        div#credit-name {
+            padding-bottom: 40px;
+        }
+        #credit-name a {
+            text-decoration: inherit;
+            color: inherit;
+        }
+        div#small-credits {
+            font-size: 20px;
+            -webkit-text-stroke: white;
+        }
+        @media screen and (max-width: 780px) {
+            div#credits-cont {
+                font-size: 2em;
+            }
+            div#small-credits {
+                font-size: .5em;
+                -webkit-text-stroke: black;
+            }
+        }
+    </style>
+    <script>
+        // When the user clicks on div, open the popup
+        $('#ltc img').click(function() {
+            $('#ltcPopup').toggleClass('show');
+            $('#btcPopup').removeClass('show');
+        });
+        $('#btc img').click(function() {
+            $('#btcPopup').toggleClass('show');
+            $('#ltcPopup').removeClass('show');
+        });
+    </script>
+</html>

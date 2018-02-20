@@ -1,0 +1,160 @@
+@font-face {
+	font-family: 'Hirakatana';
+	src: url('/assets/fonts/Hirakatana.ttf');
+}
+
+#logo-font {
+	font-family: 'Hirakatana', 'Georgia', serif;
+	font-size: 129px;
+	color: #e80202;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	width: 756px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	top: 0;
+	bottom: 0;
+	height: 232px;
+	font-weight: 100;
+}
+
+html, body {
+	height: 100%;
+	background: #85C7F2;
+	margin: 0;
+	overflow: hidden;
+}
+button {
+	color: black;
+	background: #ffdd4a;
+	border: 3.4px solid black;
+	border-radius: 4px;
+	width: 132px;
+	height: 31px;
+	font-size: 16px;
+	font-weight: bolder;
+	cursor: pointer;
+}
+canvas {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:0;
+}
+div#menu {
+	position: absolute;
+	top: 3px;
+	left: 8px;
+	color: #ffdd4a;
+	z-index: 11;
+	width: 200px;
+}
+#menu a {
+	text-decoration: inherit;
+	color: inherit;
+	float: left;
+	padding-right: 20px;
+}
+div#beta {
+	position: absolute;
+	top: 3px;
+	right: 8px;
+	color: #ffdd4a;
+	z-index: 11;
+}
+div#donate {
+	position: absolute;
+	top: 84%;
+	left: 44%;
+	z-index: 3;
+}
+.popup {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	width: 51px;
+}
+.popup img {
+	width: 100%;
+}
+/* The actual popup (appears on top) */
+.popup .popuptext {
+	visibility: hidden;
+	width: auto;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 7px;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -170px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+	visibility: visible;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity:1 ;}
+}
+@media screen and (max-width: 959px) {
+	#logo-font {
+		width: 298px;
+		height: 668px;
+		z-index: 99999;
+	}
+	div#score {
+		display: none !important;
+	}
+	#mobile-message {
+		display: table !important;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 65%;
+		font-size: 31px;
+		color: #ffdd4a;
+		text-align: center;
+	}
+}
+div#score {
+	margin: 0 auto;
+	display: table;
+	font-size: 93px;
+	font-family: serif;
+	outline: 3px;
+	color: #ffdd4a;
+	-webkit-text-stroke: 1px black;
+	text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
