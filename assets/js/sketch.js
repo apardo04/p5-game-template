@@ -1,11 +1,10 @@
-let robin, img_sprite_character;
+let img_sprite_character;
 let clickTime = -1000;
 let characterWidth = 150;
 let characterHeight = 139;
 let sprite_sheet, sprite_animation;
 let character_sprite;
-let fart, grunt;
-let objects, trees, flyers, turds, targets;
+let objects, enemies;
 let score = 0;
 let readyButton, loseButton;
 let ready = false;
@@ -60,9 +59,6 @@ function keyPressed() {
 }
 
 function gameOver() {
-    robin_sprite.mirrorY(-1);
-    robin_sprite.attractionPoint(1, robin_sprite.position.x, height * 2);
-    //robin_sprite.position.x = width + 600;
     $("#logo-font").show();
     $("div#donate").show();
     $("#menu").show();
@@ -78,7 +74,6 @@ function removeMenu() {
     $("#logo-font").hide();
     $("#menu").hide();
     $("div#donate").hide();
-    keyboard_sprite.remove();
     readyButton.remove();
     ready = true;
 }
